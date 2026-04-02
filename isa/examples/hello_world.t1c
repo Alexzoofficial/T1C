@@ -1,0 +1,14 @@
+; T1C Hello World — Basic Matrix Multiply
+; Loads a 4x4 matrix, multiplies it, stores result
+
+; Load 4x4 weight matrix (64 bytes at 0x1000)
+DMALOAD  M0, 0x00001000, 64
+
+; Load 4x4 input matrix (64 bytes at 0x2000)
+DMALOAD  M1, 0x00002000, 64
+
+; Matrix multiply: output = weights × input
+MATMUL   A0, M0, M1, 4
+
+; Store result (64 bytes to 0x3000)
+DMASTORE 0x00003000, A0, 64
