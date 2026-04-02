@@ -133,7 +133,7 @@ Free to use, modify, fabricate, and sell. Attribution appreciated but not legall
 ## 🔗 Links
 
 - **Brand:** Alexzo (alexzo.vercel.app)
-- **Founder:** Sarthak, Rampur, Uttar Pradesh, India
+- **Founder:** Sarthak
 - **Documentation:** See `/docs/` folder
 
 ---
