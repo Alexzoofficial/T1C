@@ -132,6 +132,7 @@ Free to use, modify, fabricate, and sell. Attribution appreciated but not legall
 
 ## 🔗 Links
 
+- **Website:** [alexzo.vercel.app/t1c](https://alexzo.vercel.app/t1c)
 - **Brand:** Alexzo (alexzo.vercel.app)
 - **Founder:** Sarthak
 - **Documentation:** See `/docs/` folder
