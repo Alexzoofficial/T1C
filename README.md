@@ -1,10 +1,20 @@
+<div align="center">
+
 # T1C — Tier 1 Chip
 
-**Open-Source AI Accelerator | Brand: Alexzo | Founder: Sarthak | MIT License**
+**Open-Source AI Accelerator Architecture. Like RISC-V did for CPUs, T1C does for AI chips.**
+
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Brand](https://img.shields.io/badge/Brand-Alexzo-blue.svg)
+![Founder](https://img.shields.io/badge/Founder-Sarthak-green.svg)
+![Status](https://img.shields.io/badge/Status-Open_Source-informational.svg)
+![Website](https://img.shields.io/badge/Website-alexzo.vercel.app-orange.svg)
+
+[🌐 Visit Site](https://alexzo.vercel.app/t1c) · [📄 Documentation](docs/) · [🤝 Contribute](CONTRIBUTING.md)
+
+</div>
 
 > *"We Design It. World Builds It."*
-
-T1C is an open-source AI accelerator architecture — like RISC-V did for CPUs, T1C does for AI chips. Designed by Sarthak (Alexzo), released under MIT license. Anyone can fabricate, modify, and build products on T1C.
 
 ---
 
