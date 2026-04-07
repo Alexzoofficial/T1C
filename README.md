@@ -18,6 +18,54 @@
 
 ---
 
+## 🧠 Mind Map — T1C Project Overview
+
+```mermaid
+mindmap
+  root((T1C))
+    Architecture
+      D-IMC
+        Compute inside SRAM
+        No Von Neumann bottleneck
+      MAAU Chip
+        200-400 GFLOPS INT4
+        2-4W Power
+        65nm / 130nm Process
+      Key Features
+        MIM - 4 Tenant Slices
+        TurboQuant 4x KV-Cache
+        5-Layer AVS
+    Hardware
+      RTL - Verilog
+        MAC Array
+        KV-Cache Controller
+        DMA Engine
+        MIM MMU
+        Voltage Monitor
+      PCB - KiCad
+        Blade v1 Design
+    Software
+      llama.cpp Backend
+      Verilator Simulation
+      Python Assembler
+      Linux Kernel Driver
+      ONNX Runtime Provider
+    ISA
+      9 Instructions
+      Assembly Examples
+    Fabrication
+      IHP Germany - FREE
+      GlobalFoundries 65LP
+      Efabless + SkyWater
+      Tiny Tapeout
+    Community
+      MIT License
+      Open Source
+      Open Contributions
+```
+
+---
+
 ## ⚡ Why T1C?
 
 | Problem With Current AI Chips | T1C Solution |
@@ -30,67 +78,143 @@
 
 ---
 
-## 📊 Performance (Honest Numbers)
+## 🏗️ Architecture Flowchart
 
-| System | LLaMA 7B Speed | Max Model | Cost |
-|--------|---------------|-----------|------|
-| T1C — 1 Blade | 12–20 tok/s | ~64B INT4 | $280–$650 |
-| T1C — 8 Blades | 96–160 tok/s | ~512B INT4 | $2,240–$5,200 |
-| NVIDIA RTX 4090 | 80–100 tok/s | ~24B FP16 | $1,500 |
-| NVIDIA H100 | 1000+ tok/s | Unlimited | $30,000 |
+```mermaid
+flowchart TD
+    A[AI Model Input] --> B[Host CPU / GPU]
+    B --> C[DMA Engine]
+    C --> D[T1C MAAU Chip]
+
+    subgraph D[T1C MAAU Chip - D-IMC Architecture]
+        D1[Instruction Fetch] --> D2[ISA Decoder]
+        D2 --> D3{Operation Type?}
+
+        D3 -->|MAC / Matrix Multiply| D4[SRAM Array - D-IMC]
+        D3 -->|KV-Cache| D5[TurboQuant Engine]
+        D3 -->|Memory Access| D6[MIM MMU]
+
+        D4 --> D7[MAC Result]
+        D5 --> D8[Compressed KV-Cache<br/>4x Expansion]
+        D6 --> D9[Tenant Isolation<br/>4 Slices]
+
+        D7 --> D10[Output Buffer]
+        D8 --> D10
+        D9 --> D10
+    end
+
+    D --> E[Output: AI Inference Result]
+
+    subgraph F[Power & Stability]
+        F1[2-4W Power Draw]
+        F2[70% Clock Gating]
+        F3[5-Layer AVS<br/>±3mV Stability]
+    end
+
+    F --> D
+
+    style D fill:#1a1a2e,stroke:#e94560,stroke-width:2px,color:#fff
+    style F fill:#16213e,stroke:#0f3460,stroke-width:2px,color:#fff
+```
+
+---
+
+## 📊 Performance Comparison
+
+```mermaid
+xychart-beta
+    title "LLaMA 7B Inference Speed (tokens/second)"
+    x-axis ["T1C 1 Blade", "T1C 8 Blades", "RTX 4090", "H100"]
+    y-axis "tokens/sec" 0 --> 1100
+    bar [16, 128, 90, 1000]
+```
+
+```mermaid
+xychart-beta
+    title "Cost Comparison (USD)"
+    x-axis ["T1C 1 Blade", "T1C 8 Blades", "RTX 4090", "H100"]
+    y-axis "Cost ($)" 0 --> 35000
+    bar [465, 3720, 1500, 30000]
+```
+
+```mermaid
+xychart-beta
+    title "Max Model Size Supported"
+    x-axis ["T1C 1 Blade", "T1C 8 Blades", "RTX 4090", "H100"]
+    y-axis "Billion Parameters" 0 --> 550
+    bar [64, 512, 24, 500]
+```
+
+### Performance Table (Honest Numbers)
+
+| System | LLaMA 7B Speed | Max Model | Cost | Open Source |
+|--------|---------------|-----------|------|-------------|
+| T1C — 1 Blade | 12–20 tok/s | ~64B INT4 | $280–$650 | ✅ MIT License |
+| T1C — 8 Blades | 96–160 tok/s | ~512B INT4 | $2,240–$5,200 | ✅ MIT License |
+| NVIDIA RTX 4090 | 80–100 tok/s | ~24B FP16 | $1,500 | ❌ Closed |
+| NVIDIA H100 | 1000+ tok/s | Unlimited | $30,000 | ❌ Closed |
 
 > **Note:** T1C is not faster than H100. T1C's value is: open source + DIY buildable + hardware tenant isolation + Indian-designed.
 
 ---
 
-## 🏗️ Architecture
+## 🔧 Data Processing Pipeline
 
-T1C uses **Digital In-Memory Computing (D-IMC)**:
-- Computation happens **inside** the SRAM array — not in a separate processor
-- Eliminates the Von Neumann bottleneck (data movement = 60% of AI energy)
-- Based on real research (d-Matrix, Samsung) — not theoretical
+```mermaid
+flowchart LR
+    A[AI Request] --> B[Host Software<br/>llama.cpp]
+    B --> C[T1C Compiler<br/>ONNX / Python]
+    C --> D[ISA Instructions<br/>9 Opcodes]
+    D --> E[DMA Transfer<br/>to SRAM]
+    E --> F[D-IMC Compute<br/>Inside Memory]
+    F --> G[TurboQuant<br/>KV-Cache Compress]
+    G --> H[MIM Output<br/>Tenant Isolated]
+    H --> I[Result Back<br/>to Host]
+    I --> J[AI Response]
 
-**Key specs per MAAU chip:**
-- Process: 65nm LP (GlobalFoundries) or 130nm (IHP — free for research)
-- Performance: 200–400 GFLOPS INT4 (physics verified)
-- Power: 2–4W (with 70% clock gating)
-- Voltage stability: ±3mV (5-layer AVS — production grade)
-- MIM: 4 hardware-isolated tenant slices
-- TurboQuant: 4× KV-cache expansion (Google ICLR 2026)
+    style A fill:#0f3460,color:#fff
+    style J fill:#e94560,color:#fff
+    style F fill:#1a1a2e,stroke:#e94560,stroke-width:2px,color:#fff
+```
 
 ---
 
 ## 📁 Repository Structure
 
-```
-t1c/
-├── README.md               ← You are here
-├── LICENSE                 ← MIT License
-├── CONTRIBUTING.md         ← How to contribute
-├── docs/
-│   ├── architecture.md     ← Full chip architecture
-│   ├── blade.md            ← Carrier board spec
-│   ├── turboquant.md       ← KV-cache compression
-│   ├── mim.md              ← Multi-Instance MAAU
-│   └── fabrication.md      ← How to get chips made
-├── isa/
-│   ├── t1c_isa_spec.md     ← ISA specification (9 instructions)
-│   └── examples/           ← Assembly code examples
-├── rtl/                    ← Verilog RTL (CONTRIBUTE HERE!)
-│   └── PLACEHOLDER.md
-├── pcb/                    ← KiCad board designs (CONTRIBUTE HERE!)
-│   └── PLACEHOLDER.md
-├── sim/                    ← Verilator simulation (CONTRIBUTE HERE!)
-│   └── PLACEHOLDER.md
-├── tools/                  ← Assembler, compiler tools (CONTRIBUTE HERE!)
-│   └── PLACEHOLDER.md
-└── software/               ← llama.cpp backend (CONTRIBUTE HERE!)
-    └── PLACEHOLDER.md
+```mermaid
+flowchart TD
+    A[T1C Repository] --> B[README.md]
+    A --> C[LICENSE - MIT]
+    A --> D[CONTRIBUTING.md]
+    A --> E[docs/]
+    A --> F[isa/]
+    A --> G[rtl/]
+    A --> H[pcb/]
+    A --> I[sim/]
+    A --> J[tools/]
+    A --> K[software/]
+
+    E --> E1[architecture.md]
+    E --> E2[blade.md]
+    E --> E3[turboquant.md]
+    E --> E4[mim.md]
+    E --> E5[fabrication.md]
+
+    F --> F1[t1c_isa_spec.md]
+    F --> F2[examples/]
+
+    G --> G1[Verilog RTL<br/>CONTRIBUTE HERE]
+    H --> H1[KiCad PCB<br/>CONTRIBUTE HERE]
+    I --> I1[Verilator Sim<br/>CONTRIBUTE HERE]
+    J --> J1[Assembler Tools<br/>CONTRIBUTE HERE]
+    K --> K1[llama.cpp Backend<br/>CONTRIBUTE HERE]
+
+    style A fill:#1a1a2e,stroke:#e94560,stroke-width:3px,color:#fff
 ```
 
 ---
 
-## 🔧 Fabrication
+## 🏭 Fabrication Options
 
 | Method | Node | Cost | Availability |
 |--------|------|------|-------------|
