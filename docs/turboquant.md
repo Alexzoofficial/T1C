@@ -1,6 +1,6 @@
 # T1C Architecture Documentation
 
-**T1C (Tier 1 Chip) | Alexzo | Sarthak | MIT License**
+**T1C (Tier 1 Chip) | ADDX Entp | Sarthak ([GitHub](https://github.com/sarthakpandey-official)) | MIT License**
 
 ---
 
@@ -175,4 +175,4 @@ Result: 24MB KV-Cache SRAM → **96MB effective capacity** (4-bit default)
 
 ---
 
-*T1C Architecture v1.0 | Alexzo | Sarthak | MIT License*
+*T1C Architecture v1.0 | ADDX Entp | Sarthak ([GitHub](https://github.com/sarthakpandey-official)) | MIT License*

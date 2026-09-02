@@ -77,4 +77,4 @@ Open a GitHub Issue. We respond to everything.
 All contributions are MIT licensed. By contributing, you agree your code will be MIT licensed.
 
 ---
-*T1C — Tier 1 Chip | Alexzo | Sarthak*
+*T1C — Tier 1 Chip | ADDX Entp | Created by [Sarthak](https://github.com/sarthakpandey-official)*

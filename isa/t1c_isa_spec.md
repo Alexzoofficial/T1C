@@ -1,7 +1,7 @@
 # T1C ISA Specification
 ## Instruction Set Architecture — Official Reference
 
-**Version:** 1.0 | **Author:** Sarthak (Alexzo) | **License:** MIT
+**Version:** 1.0 | **Author:** Sarthak | **License:** MIT
 
 ---
 
@@ -374,4 +374,4 @@ INSTRUCTION  Rd, Rs1, Rs2, imm    ; operands comma-separated
 
 ---
 
-*T1C ISA Specification v1.0 | Alexzo | Sarthak | MIT License*
+*T1C ISA Specification v1.0 | ADDX Entp | Sarthak ([GitHub](https://github.com/sarthakpandey-official)) | MIT License*

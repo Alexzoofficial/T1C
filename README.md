@@ -5,12 +5,12 @@
 **Open-Source AI Accelerator Architecture. Like RISC-V did for CPUs, T1C does for AI chips.**
 
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Brand](https://img.shields.io/badge/Brand-Alexzo-blue.svg)
+![Brand](https://img.shields.io/badge/Brand-ADDX_Entp-blue.svg)
 ![Founder](https://img.shields.io/badge/Founder-Sarthak-green.svg)
 ![Status](https://img.shields.io/badge/Status-Open_Source-informational.svg)
-![Website](https://img.shields.io/badge/Website-alexzo.vercel.app-orange.svg)
+![Website](https://img.shields.io/badge/Website-addx.pages.dev-orange.svg)
 
-[🌐 Visit Site](https://alexzo.vercel.app/t1c) · [📄 Documentation](docs/) · [🤝 Contribute](CONTRIBUTING.md)
+[🌐 Visit Site](https://addx.pages.dev) · [📄 Documentation](docs/) · [🤝 Contribute](CONTRIBUTING.md)
 
 </div>
 
@@ -119,7 +119,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for full details.
 
 ## 📜 License
 
-MIT License — Alexzo / Sarthak
+MIT License — ADDX Entp
 
 Free to use, modify, fabricate, and sell. Attribution appreciated but not legally required.
 
@@ -127,9 +127,10 @@ Free to use, modify, fabricate, and sell. Attribution appreciated but not legall
 
 ## 🔗 Links
 
-- **Website:** [alexzo.vercel.app/t1c](https://alexzo.vercel.app/t1c)
-- **Brand:** Alexzo (alexzo.vercel.app)
-- **Founder:** Sarthak
+- **Website:** [addx.pages.dev](https://addx.pages.dev)
+- **Brand:** ADDX Entp ([addx.pages.dev](https://addx.pages.dev))
+- **Created by:** [Sarthak](https://github.com/sarthakpandey-official)
+- **GitHub:** [sarthakpandey-official](https://github.com/sarthakpandey-official)
 - **Documentation:** See `/docs/` folder
 
 ---
