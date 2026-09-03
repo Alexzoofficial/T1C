@@ -2,11 +2,13 @@
 
 # T1C — Tier 1 Chip
 
-**Open-Source AI Accelerator Architecture. Like RISC-V did for CPUs, T1C does for AI chips.**
+**Open-source AI accelerator architecture for efficient, affordable, and community-built AI hardware.**
+
+T1C is an **open-source AI chip and hardware accelerator project** by **ADDX Entp**, created by [Sarthak](https://github.com/sarthakpandey-official). It explores digital in-memory computing (D-IMC), memory-isolated multi-tenancy, and practical open silicon for large language model inference. Learn more at [addx.pages.dev](https://addx.pages.dev).
 
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Brand](https://img.shields.io/badge/Brand-ADDX_Entp-blue.svg)
-![Founder](https://img.shields.io/badge/Founder-Sarthak-green.svg)
+![Created by](https://img.shields.io/badge/Created%20by-Sarthak-green.svg)
 ![Status](https://img.shields.io/badge/Status-Open_Source-informational.svg)
 ![Website](https://img.shields.io/badge/Website-addx.pages.dev-orange.svg)
 
@@ -15,6 +17,17 @@
 </div>
 
 > *"We Design It. World Builds It."*
+
+---
+
+## About ADDX Entp and T1C
+
+T1C is designed to make AI accelerator research more open, understandable, and buildable. The project combines hardware architecture, chip fabrication planning, an instruction-set specification, simulation placeholders, and community contribution paths in one public repository.
+
+**Project:** T1C — Tier 1 Chip  
+**Brand:** ADDX Entp  
+**Created by:** [Sarthak](https://github.com/sarthakpandey-official)  
+**Official site:** [addx.pages.dev](https://addx.pages.dev)
 
 ---
 
