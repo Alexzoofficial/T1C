@@ -1,10 +1,10 @@
 <div align="center">
 
-# ADDX Entp T1C — Open-Source AI Accelerator Chip
+# T1C: Open-Source AI Accelerator Chip for LLM Inference | ADDX Entp
 
-**Open-source AI accelerator chip architecture for efficient, affordable, and community-built AI hardware.**
+**Build the future of open AI hardware: an open-source accelerator chip architecture for efficient, affordable, community-built LLM inference.**
 
-T1C is an **open-source AI chip and hardware accelerator project** by **ADDX Entp**, created by [Sarthak](https://github.com/sarthakpandey-official). It explores digital in-memory computing (D-IMC), memory-isolated multi-tenancy, open silicon, and practical hardware for large language model inference. Learn more at [addx.pages.dev](https://addx.pages.dev).
+T1C is an **open-source AI accelerator chip project** by **ADDX Entp**, created by [Sarthak](https://github.com/sarthakpandey-official). It explores digital in-memory computing (D-IMC), memory-isolated multi-tenancy, open silicon, and practical hardware for large language model (LLM) inference. Explore the project at [addx.pages.dev](https://addx.pages.dev).
 
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Brand](https://img.shields.io/badge/Brand-ADDX_Entp-blue.svg)
