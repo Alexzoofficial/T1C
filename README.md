@@ -148,7 +148,22 @@ Free to use, modify, fabricate, and sell. Attribution appreciated but not legall
 
 ---
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=addxofficial%2Ft1c&type=date&legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=addxofficial/t1c&type=date&theme=dark&legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=addxofficial/t1c&type=date&legend=top-left" />
+    <img alt="Star History Chart for ADDX Entp T1C" src="https://api.star-history.com/chart?repos=addxofficial/t1c&type=date&legend=top-left" />
+  </picture>
+</a>
+
+This chart shows the repository’s real public star history over time. It is an external visualization, not a fabricated ranking or traffic graph.
+
+---
+
 ## Project Status & Transparency
+
 
 T1C is an **actively documented AI accelerator chip architecture** designed by **ADDX Entp** and created by [Sarthak](https://github.com/sarthakpandey-official). The repository contains the architecture, instruction-set specification, design documentation, fabrication planning, and community contribution paths. At this stage, T1C is a **design and research project**; it has **not yet been taped out, fabricated, or brought to silicon**. Hardware validation, physical implementation, tape-out, and silicon testing remain future milestones.
 
@@ -156,7 +171,7 @@ The project is intended to grow through transparent engineering, public document
 
 ## Growth and Ranking Tracking
 
-GitHub does not provide a public, permanent ranking graph that can be manually added to a repository. Real repository reach can be monitored through [GitHub Insights → Traffic](https://github.com/addxofficial/T1C/graphs/traffic), where available, and through the repository’s real stars, forks, watchers, issues, pull requests, contributors, and release activity. Google visibility depends on genuine indexing, useful content, external references, technical quality, and sustained activity; GitHub Trending depends on real community momentum and cannot be pre-filled or guaranteed from the first day.
+GitHub does not provide a public, permanent ranking graph that can be manually added to a repository. Star growth can be viewed above, while real repository reach can be monitored through [GitHub Insights → Traffic](https://github.com/addxofficial/T1C/graphs/traffic), where available, and through the repository’s real stars, forks, watchers, issues, pull requests, contributors, and release activity. Google visibility depends on genuine indexing, useful content, external references, technical quality, and sustained activity; GitHub Trending depends on real community momentum and cannot be pre-filled or guaranteed from the first day.
 
 ---
 
