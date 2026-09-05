@@ -169,10 +169,4 @@ T1C is an **actively documented AI accelerator chip architecture** designed by *
 
 The project is intended to grow through transparent engineering, public documentation, peer review, contributors, issues, pull requests, stars, forks, and real-world community adoption. No artificial traffic, fabricated ranking, or guaranteed viral growth is claimed.
 
-## Growth and Ranking Tracking
-
-GitHub does not provide a public, permanent ranking graph that can be manually added to a repository. Star growth can be viewed above, while real repository reach can be monitored through [GitHub Insights → Traffic](https://github.com/addxofficial/T1C/graphs/traffic), where available, and through the repository’s real stars, forks, watchers, issues, pull requests, contributors, and release activity. Google visibility depends on genuine indexing, useful content, external references, technical quality, and sustained activity; GitHub Trending depends on real community momentum and cannot be pre-filled or guaranteed from the first day.
-
----
-
 *"Real Engineering. Honest Numbers. Open Future. From India — For the World."*
